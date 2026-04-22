@@ -1,159 +1,82 @@
-body{
-  
-
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", Roboto, Arial, sans-serif;
 }
 
-/* Global */
-.container{
- 
-
+body {
+    background-color: #222; 
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
 }
 
-ul{
-  
-
+html {
+    max-width: 450px;
+    margin: 0 auto;
+    background-color: #444b54; 
+    border-left: 1px solid #555;
+    border-right: 1px solid #555;
 }
 
-.button_1{
- 
-
+header {
+    background-color: #333940; 
+    padding: 40px 10px 25px 10px;
+    text-align: center;
+    border-bottom: 5px solid #ff6600; 
 }
 
-.dark{
- 
-
+header h1, .logo {
+    color: #ffffff;
+    font-size: 24px;
+    font-weight: 800;
+    margin-bottom: 15px;
+    text-transform: none;
 }
 
-/* Header **/
-header{
-  
-
+header h1 span, .highlight, .orange-text {
+    color: #ff6600 !important;
 }
 
-header a{
-  
-
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
 }
 
-header li{
-  
-
+nav a, nav ul li a {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 14px;
 }
 
-header #branding{
- 
-
+nav a.active, nav ul li a.active {
+    color: #ff6600;
 }
 
-header #branding h1{
-  
-
+main, .hero-section, .hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 60vh; 
+    text-align: center;
+    background-color: #444b54;
 }
 
-header nav{
-  
-
+h1, h2 {
+    color: #ffffff;
+    font-size: 50px; 
+    line-height: 1.1;
+    font-weight: 900;
+    text-shadow: 2px 4px 10px rgba(0,0,0,0.3);
 }
 
-header .highlight, header .current a{
-  
-
-}
-
-header a:hover{
-  
-
-}
-
-/* Showcase */
-#showcase{
-  
-
-}
-
-#showcase h1{
-  
-
-}
-
-#showcase p{
-  
-
-}
-
-/* Newsletter */
-#newsletter{
-  
-
-}
-
-#newsletter h1{
-
-}
-
-#newsletter form {
- 
-
-}
-
-#newsletter input[type="email"]{
-  
-
-}
-
-/* Boxes */
-#boxes{
-  
-
-}
-
-#boxes .box{
-  
-}
-
-#boxes .box img{
-  
-}
-
-/* Sidebar */
-aside#sidebar{
-  
-}
-
-aside#sidebar .quote input, aside#sidebar .quote textarea{
-  
-}
-
-/* Main-col */
-article#main-col{
-  
-}
-
-/* Services */
-ul#services li{
-  
-}
-
-footer{
-  
-}
-
-/* Media Queries */
-@media(max-width: 768px){
-
-  header #branding,
-  header nav,
-  header nav li,
-  #newsletter h1,
-  #newsletter form,
-  #boxes .box,
-  article#main-col,
-  aside#sidebar{
-    
-  }
-
-  header{
-    
-  }
-
+/* Loại bỏ các dấu chấm của danh sách nếu HTML dùng <ul> */
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
 }
