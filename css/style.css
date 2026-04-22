@@ -128,33 +128,42 @@ body {
     }
 }
 /* Tạo khung viền điện thoại nếu xem trên máy tính */
-@media (min-width: 768px) {
-    body {
-        background: #000; /* Nền ngoài màu đen */
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        min-height: 100vh;
-    }
-
-    html {
-        background-color: #000;
-    }
-
-    /* Ép toàn bộ trang web vào một khung đứng tỉ lệ điện thoại */
-    body > * { 
-        width: 375px; 
-        height: 812px;
-        max-height: 90vh;
-        border: 8px solid #333;
-        border-radius: 40px;
-        overflow-y: auto;
-        background: var(--dark-bg);
-        box-shadow: 0 0 50px rgba(255, 87, 34, 0.2);
-    }
-}
 
 /* Ẩn thanh cuộn cho mượt */
+body::-webkit-scrollbar {
+    display: none;
+}
+/* Tối ưu giao diện điện thoại ngay lập tức */
+html, body {
+    margin: 0;
+    padding: 0;
+    background-color: #000; /* Nền đen bên ngoài cho chuyên nghiệp */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Tạo khung giả lập điện thoại */
+body::before {
+    content: "";
+    display: block;
+}
+
+/* Ép nội dung vào khung đứng (Tỉ lệ iPhone/Android) */
+body {
+    width: 100%;
+    max-width: 414px; /* Độ rộng chuẩn của điện thoại lớn */
+    height: 90vh;
+    border: 10px solid #222; /* Viền máy */
+    border-radius: 40px;
+    background: #1a1a1a;
+    overflow-y: auto;
+    box-shadow: 0 0 40px rgba(255, 87, 34, 0.3);
+    position: relative;
+}
+
+/* Ẩn thanh cuộn để nhìn giống app hơn */
 body::-webkit-scrollbar {
     display: none;
 }
